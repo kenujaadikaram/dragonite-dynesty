@@ -1,0 +1,100 @@
+    body{
+        background-image:url('./tenor.gif');
+         background-size: 1800px 1000px;
+        font-size: 28px;
+        -webkit-text-fill-color: aqua;
+        overflow: hidden;
+         
+    }
+    #contex{
+        position: relative;
+        left: 600px;
+        width: 300px;
+        height: 300px;
+        background-color: aqua;
+    }
+    
+    #d1{
+        position: relative;
+        width: 350px;
+        height:350px;
+        background-color:none;
+        left:-10px;
+        top: 15px;
+    }
+    #d2{
+        position: relative;
+        width: 350px;
+        height:350px;
+        background-color: none;
+        left: 340px;
+        top: -335px;
+    }
+    #d3{
+        position: relative;
+        width: 350px;
+        height:350px;
+        background-color: none;
+        left: 690px;
+        top: -685px;
+        background-image: url();
+        background-size: contain;
+        background-repeat:no-repeat;
+    } 
+    #d4{
+        position: relative;
+        width: 350px;
+        height:350px;
+        background-color: none;
+        left: 1390px;
+        top: -1035px;
+    }
+    #d5{
+        position: relative;
+        width: 350px;
+        height:350px;
+        background-color: none;
+        left: 1040px;
+        top: -1385px;
+    }  
+     #d6{
+        position: relative;
+        width: 350px;
+        height:350px;
+        background-color:none;
+        left:-10px;
+        top: -1395px;
+    }
+    #d7{
+        position: relative;
+        width: 350px;
+        height:350px;
+        background-color: none;
+        left: 340px;
+        top: -1745px;
+    }
+    #d8{
+        position: relative;
+        width: 350px;
+        height:350px;
+        background-color: none;
+        left: 690px;
+        top: -2095px;
+    } 
+    #d9{
+        position: relative;
+        width: 350px;
+        height:350px;
+        background-color: none;
+        left: 1390px;
+        top: -2445px;
+        
+    }
+    #d10{
+        position: relative;
+        width: 350px;
+        height:350px;
+        background-color: none;
+        left: 1040px;
+        top: -2795px;
+    }
