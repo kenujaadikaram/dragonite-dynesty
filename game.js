@@ -1,4 +1,5 @@
 
+//defining constants
 const d1 = document.getElementById("d1");
 const d2 = document.getElementById("d2");
 const d3 = document.getElementById("d3");
@@ -12,38 +13,51 @@ const d10 = document.getElementById("d10");
 const speech=document.getElementById("speech");
 const espeech=document.getElementById("enhp");
 
+//defining variables
 let hp =200;
 let ehp=200;
-
-
 let world = 1;
 let l = 1;
 let el = 1;
 let strenth = 200;
+let wg =1;
 d1.style.background ="url('dragon.gif')";
 d1.style.backgroundSize = ' 350px 350px'; 
 
+//Function run after you win
 function youwin(){
     world = 10;
     document.body.style.background="url('winner.gif')";
     document.body.style.backgroundSize = ' 2000px 1000px'; 
     }
-    function youlose(){
+
+//Function run after you lose
+function youlose(){
         world = 11;
-        document.body.style.background="url('game-over-its-over.gif')";
-        document.body.style.backgroundSize = ' 2000px 1000px'; 
-        speech.innerHTML='';
-        espeech.innerHTML='';
-        }
-        
+    document.body.style.background="url('game-over-its-over.gif')";
+    document.body.style.backgroundSize = ' 2000px 1000px'; 
+    speech.innerHTML='';
+    espeech.innerHTML='';
+ }
+      
+ //function to go back to the main location
 function backtohome(){
-   
+  if(world==1){
     document.body.style.background ="url('theodor-kipen-isometricruin108pbackground.gif')";
     world = 2;
     speech.innerHTML='HEALTH POINTS ='+hp;
     espeech.innerHTML = "You shall defeet the man of winds the birds of ice and the creator";
     ehp =200;
 }
+if(world==10){
+  document.body.style.background ="url('theodor-kipen-isometricruin108pbackground.gif')";
+  world = 2;
+  speech.innerHTML='HEALTH POINTS ='+hp;
+  espeech.innerHTML = "You shall defeet the man of winds the birds of ice and the creator";
+  ehp =200;
+}
+}
+//breeze AI 1
 function ba1(){
     d5.style.backgroundImage = "url('wind.webp')";
     d5.style.backgroundSize = "350px 350px";
@@ -57,6 +71,8 @@ function ba1(){
     }
     speech.innerHTML='HEALTH POINTS ='+hp;
 }
+
+//breeze AI 2
 function ba2(){
     d3.style.backgroundImage = "url('wind.webp')";
     d2.style.backgroundImage = "url('wind.webp')";
@@ -70,6 +86,8 @@ function ba2(){
     }
     speech.innerHTML='HEALTH POINTS ='+hp;
 }
+
+//breeze AI 3
 function ba3(){
     d10.style.backgroundImage = "url('wind.webp')";
     d10.style.backgroundSize = "350px 350px";
@@ -83,6 +101,8 @@ function ba3(){
     }
     speech.innerHTML='HEALTH POINTS ='+hp;
 }
+
+//breeze AI 4
 function ba4(){
     d8.style.backgroundImage = "url('wind.webp')";
     d8.style.backgroundSize = "350px 350px";
@@ -178,6 +198,20 @@ function b1(){
     d2.style.backgroundSize = "350px 350px";
     d3.style.backgroundSize = "350px 350px";
 
+    if (world == 5){
+      if (wg ==2 ){
+        ehp = ehp - 5;
+        ga()
+        document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+      }
+      }
+      if (world == 5){
+        if (wg ==3 ){
+          ehp = ehp - 5;
+          ga()
+        }
+        document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+        }
 }
 function b2(){
     if (world==3){
@@ -199,7 +233,20 @@ function b2(){
         ehp = ehp-5
         espeech.innerHTML ='ENEMY HEALTH POINTS='+ehp;
        }
-       
+       if (world == 5){
+        if (wg == 3){
+          ehp = ehp - 5;
+          ga()
+          document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+        }
+        } 
+        if (world == 5){
+          if (wg == 5){
+            ehp = ehp - 5;
+            ga()
+            document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+          }
+          }  
 
 }
 function b3(){
@@ -226,7 +273,20 @@ function b3(){
        ehp = ehp-5
        espeech.innerHTML ='ENEMY HEALTH POINTS='+ehp;
        }
-
+       if (world == 5){
+        if (wg == 4){
+          ehp = ehp - 5;
+          ga()
+          document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+        }
+        }
+        if (world == 5){
+          if (wg == 5){
+            ehp = ehp - 5;
+            ga()
+            document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+          }
+          }
 }
 function b4(){
     if (world==3){
@@ -259,7 +319,13 @@ function b5(){
         ehp = ehp-5
         espeech.innerHTML ='ENEMY HEALTH POINTS='+ehp;
        }
-       
+       if (world == 5){
+        if (wg == 4){
+          ehp = ehp - 5;
+          ga()
+          document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+        }
+        }    
 }
 function b6(){
     if (world==3){
@@ -278,6 +344,20 @@ function b6(){
     d7.style.backgroundSize = "350px 350px";
     d8.style.backgroundSize = "350px 350px";
     
+    if (world == 5){
+      if (wg ==7 ){
+       ehp = ehp - 5;
+       ga()
+       document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+     }
+     }
+     if (world == 5){
+       if (wg == 8){
+         ehp = ehp - 5;
+         ga()
+         document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+       }
+       }
 }
 function b7(){
     if (world==3){
@@ -308,6 +388,20 @@ function b7(){
         youlose();
       
       }
+      if (world == 5){
+        if (wg == 8){
+         ehp = ehp - 5;
+         ga()
+         document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+       }
+       }
+       if (world == 5){
+         if (wg == 10){
+           ehp = ehp - 5;
+           ga()
+           document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+         }
+         }
 }
 d8.style.backgroundImage =" url('fire.webp')";
 d10.style.backgroundImage = "url('fire.webp')";
@@ -345,6 +439,20 @@ function b8(){
        espeech.innerHTML ='ENEMY HEALTH POINTS='+ehp;
        speech.innerHTML ='HEALTH POINTS='+ehp;
        }
+       if (world == 5){
+        if (wg == 9){
+         ehp = ehp - 5;
+         ga()
+         document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+       }
+       }
+       if (world == 5){
+         if (wg == 10){
+           ehp = ehp - 5;
+           ga()
+           document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+         }
+         }
        
 }
 function b9(){
@@ -388,13 +496,20 @@ function b10(){
         ehp = ehp-5
         espeech.innerHTML ='ENEMY HEALTH POINTS='+ehp;
        }
-       
+       if (world == 5){
+        if (wg ==9 ){
+         ehp = ehp - 5;
+         ga()
+         document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+       }
+       }
+
 }
 
 function d1f(){
  
             
-    document.getElementById('roar').play();
+   
     d1.style.background ="url('dragon.gif')";
     d1.style.backgroundSize = ' 350px 350px'; 
     d2.style.background ="url('')";
@@ -406,6 +521,7 @@ function d1f(){
     d8.style.background ="url('')";
     d9.style.background ="url('')";
     d10.style.background ="url('')";
+
 
     if (world == 3){
 
@@ -426,6 +542,43 @@ if (ehp <= 0) {
     d6.style.background = "url('Basilisk.webp')";
     d6.style.backgroundSize="350px 350px";
   }
+  if (world==5){
+
+
+    if (wg ==2){
+      d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+      d2.style.background='url("wind.gif")';
+    }
+    if(wg==3){
+      d3.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d3.style.background="url('Basilisk.webp')";
+    }
+    if (wg==4){
+      d4.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+      d4.style.background='url("wind.gif")';
+    }
+    if(wg==5){
+      d5.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d5.style.background="url('Basilisk.webp')";
+    }
+
+    if(wg==7){
+      d7.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d7.style.background="url('Basilisk.webp')";
+    }
+    if (wg==8){
+      d8.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzmdzzzvbgyuszj0101010100101010100101010010101010';
+      d8.style.background='url("wind.gif")';
+    }
+    if(wg==9){
+      d9.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d9.style.background="url('Basilisk.webp')";
+    }
+    if (wg==10){
+      d10.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhqzzzvbgyuszj0101010100101010100101010010101010';
+      d10.style.background='url("wind.gif")';
+    }
+    }
 }
 function d2f(){
     document.getElementById('roar').play();
@@ -461,6 +614,43 @@ if (ehp <= 0) {
     d6.style.background = "url('Basilisk.webp')";
     d6.style.backgroundSize="350px 350px";
   }
+  if (world==5){
+
+
+    if (wg ==2){
+      d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+      d2.style.background='url("wind.gif")';
+    }
+    if(wg==3){
+      d3.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d3.style.background="url('Basilisk.webp')";
+    }
+    if (wg==4){
+      d4.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+      d4.style.background='url("wind.gif")';
+    }
+    if(wg==5){
+      d5.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d5.style.background="url('Basilisk.webp')";
+    }
+
+    if(wg==7){
+      d7.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d7.style.background="url('Basilisk.webp')";
+    }
+    if (wg==8){
+      d8.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzmdzzzvbgyuszj0101010100101010100101010010101010';
+      d8.style.background='url("wind.gif")';
+    }
+    if(wg==9){
+      d9.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d9.style.background="url('Basilisk.webp')";
+    }
+    if (wg==10){
+      d10.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhqzzzvbgyuszj0101010100101010100101010010101010';
+      d10.style.background='url("wind.gif")';
+    }
+    }
 }
 function d3f(){
     document.getElementById('roar').play();
@@ -495,6 +685,43 @@ if (ehp <= 0) {
     d6.style.background = "url('Basilisk.webp')";
     d6.style.backgroundSize="350px 350px";
   }
+  if (world==5){
+
+
+    if (wg ==2){
+      d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+      d2.style.background='url("wind.gif")';
+    }
+    if(wg==3){
+      d3.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d3.style.background="url('Basilisk.webp')";
+    }
+    if (wg==4){
+      d4.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+      d4.style.background='url("wind.gif")';
+    }
+    if(wg==5){
+      d5.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d5.style.background="url('Basilisk.webp')";
+    }
+
+    if(wg==7){
+      d7.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d7.style.background="url('Basilisk.webp')";
+    }
+    if (wg==8){
+      d8.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzmdzzzvbgyuszj0101010100101010100101010010101010';
+      d8.style.background='url("wind.gif")';
+    }
+    if(wg==9){
+      d9.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+      d9.style.background="url('Basilisk.webp')";
+    }
+    if (wg==10){
+      d10.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhqzzzvbgyuszj0101010100101010100101010010101010';
+      d10.style.background='url("wind.gif")';
+    }
+    }
 }
 function d4f(){
     document.getElementById('roar').play();
@@ -529,6 +756,43 @@ function d4f(){
         d6.style.background = "url('Basilisk.webp')";
         d6.style.backgroundSize="350px 350px";
       }
+      if (world==5){
+
+
+        if (wg ==2){
+          d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+          d2.style.background='url("wind.gif")';
+        }
+        if(wg==3){
+          d3.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d3.style.background="url('Basilisk.webp')";
+        }
+        if (wg==4){
+          d4.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+          d4.style.background='url("wind.gif")';
+        }
+        if(wg==5){
+          d5.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d5.style.background="url('Basilisk.webp')";
+        }
+
+        if(wg==7){
+          d7.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d7.style.background="url('Basilisk.webp')";
+        }
+        if (wg==8){
+          d8.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzmdzzzvbgyuszj0101010100101010100101010010101010';
+          d8.style.background='url("wind.gif")';
+        }
+        if(wg==9){
+          d9.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d9.style.background="url('Basilisk.webp')";
+        }
+        if (wg==10){
+          d10.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhqzzzvbgyuszj0101010100101010100101010010101010';
+          d10.style.background='url("wind.gif")';
+        }
+        }
 }
 function d5f(){
     document.getElementById('roar').play();
@@ -565,6 +829,43 @@ function d5f(){
         d6.style.background = "url('Basilisk.webp')";
         d6.style.backgroundSize="350px 350px";
       }
+      if (world==5){
+
+
+        if (wg ==2){
+          d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+          d2.style.background='url("wind.gif")';
+        }
+        if(wg==3){
+          d3.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d3.style.background="url('Basilisk.webp')";
+        }
+        if (wg==4){
+          d4.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+          d4.style.background='url("wind.gif")';
+        }
+        if(wg==5){
+          d5.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d5.style.background="url('Basilisk.webp')";
+        }
+
+        if(wg==7){
+          d7.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d7.style.background="url('Basilisk.webp')";
+        }
+        if (wg==8){
+          d8.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzmdzzzvbgyuszj0101010100101010100101010010101010';
+          d8.style.background='url("wind.gif")';
+        }
+        if(wg==9){
+          d9.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d9.style.background="url('Basilisk.webp')";
+        }
+        if (wg==10){
+          d10.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhqzzzvbgyuszj0101010100101010100101010010101010';
+          d10.style.background='url("wind.gif")';
+        }
+        }
 }
 function d6f(){
     
@@ -600,6 +901,43 @@ function d6f(){
         d6.style.background = "url('Basilisk.webp')";
         d6.style.backgroundSize="350px 350px";
       }
+      if (world==5){
+
+
+        if (wg ==2){
+          d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+          d2.style.background='url("wind.gif")';
+        }
+        if(wg==3){
+          d3.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d3.style.background="url('Basilisk.webp')";
+        }
+        if (wg==4){
+          d4.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+          d4.style.background='url("wind.gif")';
+        }
+        if(wg==5){
+          d5.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d5.style.background="url('Basilisk.webp')";
+        }
+
+        if(wg==7){
+          d7.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d7.style.background="url('Basilisk.webp')";
+        }
+        if (wg==8){
+          d8.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzmdzzzvbgyuszj0101010100101010100101010010101010';
+          d8.style.background='url("wind.gif")';
+        }
+        if(wg==9){
+          d9.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d9.style.background="url('Basilisk.webp')";
+        }
+        if (wg==10){
+          d10.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhqzzzvbgyuszj0101010100101010100101010010101010';
+          d10.style.background='url("wind.gif")';
+        }
+        }
 }
 function d7f(){
     
@@ -636,7 +974,44 @@ function d7f(){
      if (world==5){
       d6.style.background = "url('Basilisk.webp')";
       d6.style.backgroundSize="350px 350px";
-    }     
+    } 
+    if (world==5){
+
+
+      if (wg ==2){
+        d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+        d2.style.background='url("wind.gif")';
+      }
+      if(wg==3){
+        d3.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+        d3.style.background="url('Basilisk.webp')";
+      }
+      if (wg==4){
+        d4.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+        d4.style.background='url("wind.gif")';
+      }
+      if(wg==5){
+        d5.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+        d5.style.background="url('Basilisk.webp')";
+      }
+
+      if(wg==7){
+        d7.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+        d7.style.background="url('Basilisk.webp')";
+      }
+      if (wg==8){
+        d8.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzmdzzzvbgyuszj0101010100101010100101010010101010';
+        d8.style.background='url("wind.gif")';
+      }
+      if(wg==9){
+        d9.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+        d9.style.background="url('Basilisk.webp')";
+      }
+      if (wg==10){
+        d10.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhqzzzvbgyuszj0101010100101010100101010010101010';
+        d10.style.background='url("wind.gif")';
+      }
+      }    
 }
 function d8f(){
     document.getElementById('roar').play();
@@ -673,6 +1048,42 @@ function d8f(){
             d6.style.background = "url('Basilisk.webp')";
             d6.style.backgroundSize="350px 350px";
           } 
+          if (world==5){
+
+
+            if (wg ==2){
+              d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+              d2.style.background='url("wind.gif")';
+            }
+            if(wg==3){
+              d3.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+              d3.style.background="url('Basilisk.webp')";
+            }
+            if (wg==4){
+              d4.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+              d4.style.background='url("wind.gif")';
+            }
+            if(wg==5){
+              d5.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+              d5.style.background="url('Basilisk.webp')";
+            }
+            if(wg==7){
+              d7.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+              d7.style.background="url('Basilisk.webp')";
+            }
+            if (wg==8){
+              d8.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzmdzzzvbgyuszj0101010100101010100101010010101010';
+              d8.style.background='url("wind.gif")';
+            }
+            if(wg==9){
+              d9.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+              d9.style.background="url('Basilisk.webp')";
+            }
+            if (wg==10){
+              d10.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhqzzzvbgyuszj0101010100101010100101010010101010';
+              d10.style.background='url("wind.gif")';
+            }
+            }
 }
 function d9f(){  
 
@@ -708,6 +1119,43 @@ function d9f(){
         d6.style.background = "url('Basilisk.webp')";
         d6.style.backgroundSize="350px 350px";
       }
+      if (world==5){
+
+
+        if (wg ==2){
+          d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+          d2.style.background='url("wind.gif")';
+        }
+        if(wg==3){
+          d3.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d3.style.background="url('Basilisk.webp')";
+        }
+        if (wg==4){
+          d4.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+          d4.style.background='url("wind.gif")';
+        }
+        if(wg==5){
+          d5.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d5.style.background="url('Basilisk.webp')";
+        }
+
+        if(wg==7){
+          d7.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d7.style.background="url('Basilisk.webp')";
+        }
+        if (wg==8){
+          d8.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzmdzzzvbgyuszj0101010100101010100101010010101010';
+          d8.style.background='url("wind.gif")';
+        }
+        if(wg==9){
+          d9.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d9.style.background="url('Basilisk.webp')";
+        }
+        if (wg==10){
+          d10.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhqzzzvbgyuszj0101010100101010100101010010101010';
+          d10.style.background='url("wind.gif")';
+        }
+        }
 }
 function d10f(){
     document.getElementById('roar').play();
@@ -739,16 +1187,56 @@ function d10f(){
         d6.style.background = "url('Basilisk.webp')";
         d6.style.backgroundSize="350px 350px";
       }
+      if (world==5){
+
+
+        if (wg ==2){
+          d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+          d2.style.background='url("wind.gif")';
+        }
+        if(wg==3){
+          d3.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d3.style.background="url('Basilisk.webp')";
+        }
+        if (wg==4){
+          d4.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
+          d4.style.background='url("wind.gif")';
+        }
+        if(wg==5){
+          d5.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d5.style.background="url('Basilisk.webp')";
+        }
+
+        if(wg==7){
+          d7.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d7.style.background="url('Basilisk.webp')";
+        }
+        if (wg==8){
+          d8.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzmdzzzvbgyuszj0101010100101010100101010010101010';
+          d8.style.background='url("wind.gif")';
+        }
+        if(wg==9){
+          d9.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
+          d9.style.background="url('Basilisk.webp')";
+        }
+        if (wg==10){
+          d10.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhqzzzvbgyuszj0101010100101010100101010010101010';
+          d10.style.background='url("wind.gif")';
+        }
+        }
 }
 function gato(){
   world = 5;
   d6.style.background ="url('Basilisk.webp')";
+  d6.style.backgroundColor="gold";
   d6.style.backgroundsize="350px 350px";
   alert(" I AM THE CREATOR OF THIS DIVINE WORLD . YOU THINK YOU HAVE EVEN A MICRONS CHANCE OF DEFEETING ME");
   ga()
 }
 function ga(){
-  var gra=Math.round(Math.random()*11);
+  var gra=Math.round(Math.random()*8)+2;
+  wg = gra;
+  
   if (gra==2){
     d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
     d2.style.background='url("wind.gif")';
@@ -764,10 +1252,6 @@ function ga(){
   if(gra==5){
     d5.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
     d5.style.background="url('Basilisk.webp')";
-  }
-  if (gra==6){
-    d6.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
-    d6.style.background='url("wind.gif")';
   }
   if(gra==7){
     d7.innerHTML ="x b cgs2wi jehefiysre u5j3wklsljrdhfery  4wt  ehsjas khzgbgdety4ijsakyeyyfhgjwtehrhreyushfuhj";
@@ -787,4 +1271,5 @@ function ga(){
   }
   
   }
+
 
