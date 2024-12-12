@@ -1,4 +1,5 @@
-//defining the constants
+
+//defining constants
 const d1 = document.getElementById("d1");
 const d2 = document.getElementById("d2");
 const d3 = document.getElementById("d3");
@@ -13,13 +14,13 @@ const speech=document.getElementById("speech");
 const espeech=document.getElementById("enhp");
 
 //defining variables
-let hp =200;
-let ehp=200;
+let hp =350;
+let ehp=20;
 let world = 1;
 let l = 1;
 let el = 1;
 let strenth = 200;
-let wg =1;
+let wg =200;
 d1.style.background ="url('dragon.gif')";
 d1.style.backgroundSize = ' 350px 350px'; 
 
@@ -41,6 +42,7 @@ function youlose(){
       
  //function to go back to the main location
 function backtohome(){
+
   if(world==1){
     document.body.style.background ="url('theodor-kipen-isometricruin108pbackground.gif')";
     world = 2;
@@ -58,6 +60,7 @@ if(world==10){
 }
 //breeze AI 1
 function ba1(){
+  
     d5.style.backgroundImage = "url('wind.webp')";
     d5.style.backgroundSize = "350px 350px";
     d3.style.backgroundImage = "url('wind.webp')";
@@ -181,6 +184,8 @@ if (ran == 4){
 }
 }
 function b1(){
+
+  
     if (world==3){
         bai()
     }
@@ -390,16 +395,21 @@ function b7(){
       if (world == 5){
         if (wg == 8){
          ehp = ehp - 5;
-         ga()
+         ga();
          document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
        }
        }
        if (world == 5){
-         if (wg == 10){
-           ehp = ehp - 5;
-           ga()
-           document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
-         }
+        if (wg == 10){
+          ehp = ehp - 5;
+          ga();
+          document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+        }
+        if (wg == 8){
+          ehp = ehp - 5;
+          ga();
+          document.getElementById("enhp").innerHTML='ENEMY HEALTH POINTS ='+ehp;
+        }
          }
 }
 d8.style.backgroundImage =" url('fire.webp')";
@@ -413,7 +423,16 @@ if (el == 10){
 
 }
 function b8(){
-
+  if (world == 5){
+    ga();
+    hp = hp-10;
+    document.getElementById("speech").innerHTML=' HEALTH POINTS ='+hp;
+    d6.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
+    d7.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
+    d8.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
+    d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
+    d10.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
+  }
     if (world==3){
         bai()
     }
@@ -455,6 +474,7 @@ function b8(){
        
 }
 function b9(){
+
     if (world==3){
         bai()
     } 
@@ -475,8 +495,17 @@ function b9(){
 
     }
 }
-
 function b10(){
+  if (world == 5){
+    ga();
+    hp = hp-10;
+    document.getElementById("speech").innerHTML=' HEALTH POINTS ='+hp;
+    d6.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
+    d7.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
+    d8.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
+    d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
+    d10.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
+  }
     if (world==3){
         bai()
     }
@@ -504,10 +533,9 @@ function b10(){
        }
 
 }
-
 function d1f(){
  
-            
+  console.log(Math.round(Math.random()*8)+2);
    
     d1.style.background ="url('dragon.gif')";
     d1.style.backgroundSize = ' 350px 350px'; 
@@ -542,7 +570,7 @@ if (ehp <= 0) {
     d6.style.backgroundSize="350px 350px";
   }
   if (world==5){
-
+    d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
 
     if (wg ==2){
       d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
@@ -614,7 +642,7 @@ if (ehp <= 0) {
     d6.style.backgroundSize="350px 350px";
   }
   if (world==5){
-
+    d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
 
     if (wg ==2){
       d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
@@ -685,7 +713,7 @@ if (ehp <= 0) {
     d6.style.backgroundSize="350px 350px";
   }
   if (world==5){
-
+    d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
 
     if (wg ==2){
       d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
@@ -754,6 +782,7 @@ function d4f(){
       if (world==5){
         d6.style.background = "url('Basilisk.webp')";
         d6.style.backgroundSize="350px 350px";
+        d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
       }
       if (world==5){
 
@@ -899,6 +928,7 @@ function d6f(){
       if (world==5){
         d6.style.background = "url('Basilisk.webp')";
         d6.style.backgroundSize="350px 350px";
+        d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
       }
       if (world==5){
 
@@ -973,6 +1003,7 @@ function d7f(){
      if (world==5){
       d6.style.background = "url('Basilisk.webp')";
       d6.style.backgroundSize="350px 350px";
+      d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
     } 
     if (world==5){
 
@@ -1046,6 +1077,7 @@ function d8f(){
           if (world==5){
             d6.style.background = "url('Basilisk.webp')";
             d6.style.backgroundSize="350px 350px";
+            d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
           } 
           if (world==5){
 
@@ -1119,7 +1151,7 @@ function d9f(){
         d6.style.backgroundSize="350px 350px";
       }
       if (world==5){
-
+        d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
 
         if (wg ==2){
           d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
@@ -1155,6 +1187,7 @@ function d9f(){
           d10.style.background='url("wind.gif")';
         }
         }
+
 }
 function d10f(){
     document.getElementById('roar').play();
@@ -1187,7 +1220,7 @@ function d10f(){
         d6.style.backgroundSize="350px 350px";
       }
       if (world==5){
-
+        d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
 
         if (wg ==2){
           d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
@@ -1229,12 +1262,19 @@ function gato(){
   d6.style.background ="url('Basilisk.webp')";
   d6.style.backgroundColor="gold";
   d6.style.backgroundsize="350px 350px";
-  alert(" I AM THE CREATOR OF THIS DIVINE WORLD . YOU THINK YOU HAVE EVEN A MICRONS CHANCE OF DEFEETING ME");
+  alert(" I AM THE CREATOR OF THIS DIVINE WORLD . YOU THINK YOU HAVE EVEN A MICRONS CHANCE OF DEFEETING ME  .AND EVEN IF YOU TRY I WILL GLITH THIS WORLD UNTIL THE DAY I FALL ");
+  document.getElementById('bgm2').play();
   ga()
 }
 function ga(){
+  d9.style.backgroundImage ="url('Soul_Fire_JE1.webp')";
+  hp = hp -2;
+  document.getElementById("speech").innerHTML="HEALTH POINTS = "+hp;
   var gra=Math.round(Math.random()*8)+2;
   wg = gra;
+  if (wg == 6){
+    wg ==7
+  }
   
   if (gra==2){
     d2.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhdszzzzzzzzzzzzzzzzzzvbgyuszj0101010100101010100101010010101010';
@@ -1268,7 +1308,7 @@ function ga(){
     d10.innerHTML = 'uhsWN  h mcvnjgkieu4j,m,ndfgkmtvhfjdjfhqzzzvbgyuszj0101010100101010100101010010101010';
     d10.style.background='url("wind.gif")';
   }
-  
-  }
+
+}
 
 
